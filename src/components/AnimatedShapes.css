@@ -1,0 +1,382 @@
+.animated-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+.shape {
+    position: absolute;
+}
+
+/* ===== 3D CUBES ===== */
+.cube-container {
+    top: 10%;
+    right: 10%;
+    width: 80px;
+    height: 80px;
+    transform-style: preserve-3d;
+}
+
+.cube-container.cube-2 {
+    top: 70%;
+    left: 5%;
+    width: 50px;
+    height: 50px;
+}
+
+.cube-container.cube-3 {
+    top: 40%;
+    right: 3%;
+    width: 35px;
+    height: 35px;
+}
+
+.cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.face {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    background: rgba(59, 130, 246, 0.05);
+    backdrop-filter: blur(5px);
+}
+
+.cube.small .face {
+    width: 50px;
+    height: 50px;
+}
+
+.cube.tiny .face {
+    width: 35px;
+    height: 35px;
+}
+
+.front {
+    transform: rotateY(0deg) translateZ(40px);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(40px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(40px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(40px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(40px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(40px);
+}
+
+.cube.small .front {
+    transform: rotateY(0deg) translateZ(25px);
+}
+
+.cube.small .back {
+    transform: rotateY(180deg) translateZ(25px);
+}
+
+.cube.small .right {
+    transform: rotateY(90deg) translateZ(25px);
+}
+
+.cube.small .left {
+    transform: rotateY(-90deg) translateZ(25px);
+}
+
+.cube.small .top {
+    transform: rotateX(90deg) translateZ(25px);
+}
+
+.cube.small .bottom {
+    transform: rotateX(-90deg) translateZ(25px);
+}
+
+.cube.tiny .front {
+    transform: rotateY(0deg) translateZ(17px);
+}
+
+.cube.tiny .back {
+    transform: rotateY(180deg) translateZ(17px);
+}
+
+.cube.tiny .right {
+    transform: rotateY(90deg) translateZ(17px);
+}
+
+.cube.tiny .left {
+    transform: rotateY(-90deg) translateZ(17px);
+}
+
+.cube.tiny .top {
+    transform: rotateX(90deg) translateZ(17px);
+}
+
+.cube.tiny .bottom {
+    transform: rotateX(-90deg) translateZ(17px);
+}
+
+/* ===== 3D RINGS ===== */
+.ring {
+    border: 2px solid rgba(59, 130, 246, 0.2);
+    border-radius: 50%;
+    transform-style: preserve-3d;
+}
+
+.ring-1 {
+    top: 20%;
+    left: 5%;
+    width: 120px;
+    height: 120px;
+}
+
+.ring-2 {
+    bottom: 30%;
+    right: 8%;
+    width: 150px;
+    height: 150px;
+    border-color: rgba(99, 102, 241, 0.15);
+}
+
+.ring-3 {
+    top: 50%;
+    left: 15%;
+    width: 80px;
+    height: 80px;
+    border-color: rgba(59, 130, 246, 0.25);
+}
+
+/* ===== SPHERES ===== */
+.sphere {
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(99, 102, 241, 0.08) 100%);
+    box-shadow: inset 0 0 30px rgba(59, 130, 246, 0.15), 0 0 20px rgba(59, 130, 246, 0.1);
+}
+
+.sphere-1 {
+    top: 60%;
+    left: 8%;
+    width: 60px;
+    height: 60px;
+}
+
+.sphere-2 {
+    top: 25%;
+    right: 20%;
+    width: 40px;
+    height: 40px;
+}
+
+.sphere-3 {
+    bottom: 20%;
+    left: 25%;
+    width: 30px;
+    height: 30px;
+}
+
+.sphere-4 {
+    top: 75%;
+    right: 25%;
+    width: 45px;
+    height: 45px;
+}
+
+.sphere-5 {
+    top: 15%;
+    left: 30%;
+    width: 25px;
+    height: 25px;
+}
+
+/* ===== DIAMONDS ===== */
+.diamond {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(99, 102, 241, 0.1) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    transform: rotate(45deg);
+}
+
+.diamond-1 {
+    top: 35%;
+    left: 3%;
+}
+
+.diamond-2 {
+    bottom: 40%;
+    right: 5%;
+    width: 30px;
+    height: 30px;
+}
+
+.diamond-3 {
+    top: 80%;
+    left: 40%;
+    width: 25px;
+    height: 25px;
+}
+
+/* ===== TRIANGLES ===== */
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 40px solid rgba(59, 130, 246, 0.15);
+}
+
+.triangle-1 {
+    top: 45%;
+    right: 15%;
+}
+
+.triangle-2 {
+    bottom: 25%;
+    left: 10%;
+    border-bottom-color: rgba(99, 102, 241, 0.12);
+}
+
+/* ===== GLOWING ORBS ===== */
+.orb {
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.4) 0%, transparent 70%);
+    filter: blur(20px);
+}
+
+.orb-1 {
+    top: 15%;
+    left: 20%;
+    width: 200px;
+    height: 200px;
+}
+
+.orb-2 {
+    bottom: 10%;
+    right: 15%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, transparent 70%);
+}
+
+.orb-3 {
+    top: 60%;
+    right: 30%;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.25) 0%, transparent 70%);
+}
+
+/* ===== FLOATING LINES ===== */
+.line {
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent);
+    border-radius: 2px;
+}
+
+.line-1 {
+    top: 30%;
+    left: 40%;
+}
+
+.line-2 {
+    bottom: 35%;
+    right: 35%;
+    width: 80px;
+}
+
+/* ===== DOTS GRID ===== */
+.dots-grid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    opacity: 0.3;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    background: var(--accent-primary);
+    border-radius: 50%;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .cube-container {
+        width: 50px;
+        height: 50px;
+        top: 5%;
+        right: 5%;
+    }
+
+    .cube-container.cube-2 {
+        display: none;
+    }
+
+    .cube-container.cube-3 {
+        display: none;
+    }
+
+    .ring-1 {
+        width: 80px;
+        height: 80px;
+    }
+
+    .ring-2 {
+        width: 100px;
+        height: 100px;
+    }
+
+    .ring-3 {
+        display: none;
+    }
+
+    .orb-1 {
+        width: 120px;
+        height: 120px;
+    }
+
+    .orb-2 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .orb-3 {
+        display: none;
+    }
+
+    .diamond-3 {
+        display: none;
+    }
+
+    .triangle-2 {
+        display: none;
+    }
+
+    .dots-grid {
+        display: none;
+    }
+}
